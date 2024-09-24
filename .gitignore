@@ -1,40 +1,33 @@
-HELP.md
-.gradle
-build/
-!gradle/wrapper/gradle-wrapper.jar
-!**/src/main/**/build/
-!**/src/test/**/build/
+# Gradle 파일
+.gradle/
+/build/
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
+# IntelliJ IDEA와 Android Studio 설정 파일
+.idea/
+/*.iml
+/.vscode/
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-out/
-!**/src/main/**/out/
-!**/src/test/**/out/
+# 로그 파일
+*.log
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
+# 빌드 아티팩트
+*.apk
+*.ap_
+*.dex
+*.class
+*.jar
+*.war
+*.ear
 
-### VS Code ###
-.vscode/
+# 로컬 환경 관련 설정
+local.properties
 
-### Others ###
-!.lock
+# macOS 관련 파일
+.DS_Store
+
+# Gradle 캐시
+**/build/
+
+# Kotlin 및 Java 컴파일 파일
+*.kt~
+*.java~
