@@ -67,7 +67,7 @@ class UserServiceTest @Autowired constructor (
     fun updateUserNameTest() {
         // given
         val saveUser = userRepository.save(User("A", null))
-        val req = UserUpdateRequest(saveUser.id, "B")
+        val req = UserUpdateRequest(saveUser.id!!, "B")
 
         // when
         userService.updateUserName(req)
