@@ -10,7 +10,7 @@ import javax.persistence.Id
 import javax.persistence.OneToMany
 
 @Entity
-class User (
+class User constructor(
     var name: String,
 
     val age: Int?,
