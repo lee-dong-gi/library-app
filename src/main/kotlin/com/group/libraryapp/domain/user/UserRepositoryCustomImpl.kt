@@ -12,9 +12,7 @@ class UserRepositoryCustomImpl(
         return queryFactory
             .select(user).distinct()
             .from(user)
-            .leftJoin(userLoanHistory)
-                .on(userLoanHistory.user.id.eq(user.id))
-                .fetchJoin() // N + 1 방지
+            .leftJoin(user.userLoanHistories).fetchJoin() // N + 1 방지
             .fetch();
     }
 

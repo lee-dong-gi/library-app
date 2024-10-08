@@ -1,5 +1,6 @@
 package com.group.libraryapp.service.book
 
+import com.group.libraryapp.CleaningSpringBootTest
 import com.group.libraryapp.domain.book.Book
 import com.group.libraryapp.domain.book.BookRepository
 import com.group.libraryapp.domain.book.BookType
@@ -26,12 +27,14 @@ class BookServiceTest @Autowired constructor(
     private val bookRepository: BookRepository,
     private val userRepository: UserRepository,
     private val userLoanHistoryRepository: UserLoanHistoryRepository,
-) {
-    @AfterEach
-    fun clear() {
-        bookRepository.deleteAll()
-        userRepository.deleteAll()
-    }
+) : CleaningSpringBootTest() {
+
+//    CleaningSpringBootTest 를 상속받지 않는 경우 아래 코드 사용
+//    @AfterEach
+//    fun clear() {
+//        bookRepository.deleteAll()
+//        userRepository.deleteAll()
+//    }
 
     @Test
     @DisplayName("책 등록이 정상 동작한다")
